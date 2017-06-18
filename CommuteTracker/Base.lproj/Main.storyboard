@@ -213,10 +213,10 @@
             </objects>
             <point key="canvasLocation" x="2954.4000000000001" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Trip View Controller-->
         <scene sceneID="fDL-4Q-jGS">
             <objects>
-                <viewController id="50R-qX-cdu" sceneMemberID="viewController">
+                <viewController id="50R-qX-cdu" customClass="AddTripViewController" customModule="CommuteTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LAK-db-bIs"/>
                         <viewControllerLayoutGuide type="bottom" id="4xc-Yt-wDd"/>
@@ -238,22 +238,59 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ueO-Dh-QIL">
-                                <frame key="frameInset" minY="132" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                </accessibility>
-                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nu5-Lw-exB">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UWc-0H-V8Y">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="a1i-eg-r1F"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ylo-0w-xZk">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="xf4-3O-NE2"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Bike"/>
+                                    <segment title="Walk"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTz-7a-gJM">
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="50R-qX-cdu" eventType="touchUpInside" id="G9j-hK-K3n"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Nu5-Lw-exB" firstAttribute="top" secondItem="8r9-uX-0g6" secondAttribute="bottom" constant="20" id="4Lc-q3-4hg"/>
+                            <constraint firstItem="UWc-0H-V8Y" firstAttribute="centerX" secondItem="BAC-iA-4o0" secondAttribute="centerX" id="LtO-kn-Y42"/>
                             <constraint firstItem="s3C-DM-mIP" firstAttribute="centerX" secondItem="BAC-iA-4o0" secondAttribute="centerX" id="MDL-BL-OuG"/>
+                            <constraint firstItem="UTz-7a-gJM" firstAttribute="centerX" secondItem="BAC-iA-4o0" secondAttribute="centerX" id="MRN-B9-7yX"/>
+                            <constraint firstItem="ylo-0w-xZk" firstAttribute="centerX" secondItem="BAC-iA-4o0" secondAttribute="centerX" id="UcP-IF-AVn"/>
+                            <constraint firstItem="ylo-0w-xZk" firstAttribute="top" secondItem="UWc-0H-V8Y" secondAttribute="bottom" constant="30" id="Uzq-0Z-e66"/>
+                            <constraint firstItem="Nu5-Lw-exB" firstAttribute="centerX" secondItem="BAC-iA-4o0" secondAttribute="centerX" id="cf1-PV-NI7"/>
                             <constraint firstItem="s3C-DM-mIP" firstAttribute="top" secondItem="LAK-db-bIs" secondAttribute="bottom" constant="20" id="fDb-lj-lem"/>
                             <constraint firstItem="8r9-uX-0g6" firstAttribute="top" secondItem="s3C-DM-mIP" secondAttribute="bottom" constant="15" id="lmo-c9-gpi"/>
+                            <constraint firstItem="UWc-0H-V8Y" firstAttribute="top" secondItem="Nu5-Lw-exB" secondAttribute="bottom" constant="15" id="m6F-HZ-Uj8"/>
+                            <constraint firstItem="UTz-7a-gJM" firstAttribute="top" secondItem="ylo-0w-xZk" secondAttribute="bottom" constant="80" id="p46-Un-k6J"/>
                             <constraint firstItem="8r9-uX-0g6" firstAttribute="centerX" secondItem="BAC-iA-4o0" secondAttribute="centerX" id="r7m-uc-A8T"/>
+                            <constraint firstItem="UWc-0H-V8Y" firstAttribute="width" secondItem="8r9-uX-0g6" secondAttribute="width" id="wBV-4o-ceC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="UTz-7a-gJM" id="w5H-En-K7Y"/>
+                        <outlet property="bikeWalkToggle" destination="ylo-0w-xZk" id="48q-bC-0fS"/>
+                        <outlet property="distanceText" destination="8r9-uX-0g6" id="YR0-fn-Lx5"/>
+                        <outlet property="tripNameText" destination="UWc-0H-V8Y" id="993-54-7Bb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2xh-0f-VwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

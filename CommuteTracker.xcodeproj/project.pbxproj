@@ -15,6 +15,8 @@
 		76367C0F1EF6089D003F4EEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76367C0D1EF6089D003F4EEF /* LaunchScreen.storyboard */; };
 		76367C1B1EF6180A003F4EEF /* BikeLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76367C1A1EF6180A003F4EEF /* BikeLogo.jpg */; };
 		76367C1D1EF6DB4E003F4EEF /* icons8-List-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 76367C1C1EF6DB4E003F4EEF /* icons8-List-50.png */; };
+		76367C211EF70782003F4EEF /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76367C201EF70782003F4EEF /* Menu.swift */; };
+		76367C231EF70B6D003F4EEF /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76367C221EF70B6D003F4EEF /* AddTripViewController.swift */; };
 		FDC299D051ABE85F9B4BEE10 /* Pods_CommuteTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D350C4D5220DFAFDF42CBE /* Pods_CommuteTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		76367C101EF6089D003F4EEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76367C1A1EF6180A003F4EEF /* BikeLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BikeLogo.jpg; sourceTree = "<group>"; };
 		76367C1C1EF6DB4E003F4EEF /* icons8-List-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-List-50.png"; sourceTree = "<group>"; };
+		76367C201EF70782003F4EEF /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		76367C221EF70B6D003F4EEF /* AddTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 			children = (
 				76367C011EF6089D003F4EEF /* AppDelegate.swift */,
 				76367C031EF6089D003F4EEF /* HomeViewController.swift */,
+				76367C201EF70782003F4EEF /* Menu.swift */,
+				76367C221EF70B6D003F4EEF /* AddTripViewController.swift */,
 				76367C1A1EF6180A003F4EEF /* BikeLogo.jpg */,
 				76367C051EF6089D003F4EEF /* Main.storyboard */,
 				76367C0B1EF6089D003F4EEF /* Assets.xcassets */,
@@ -222,8 +228,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76367C231EF70B6D003F4EEF /* AddTripViewController.swift in Sources */,
 				76367C0A1EF6089D003F4EEF /* CommuteTracker.xcdatamodeld in Sources */,
 				76367C041EF6089D003F4EEF /* HomeViewController.swift in Sources */,
+				76367C211EF70782003F4EEF /* Menu.swift in Sources */,
 				76367C021EF6089D003F4EEF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
