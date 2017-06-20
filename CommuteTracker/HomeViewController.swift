@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class HomeViewController: UIViewController {
 
@@ -21,7 +22,7 @@ class HomeViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        getCommutes()
+        commuteArray = Helper.getCommutes()
         totalMiles.text = String(sumCommutes())
     }
 
@@ -30,17 +31,6 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func getCommutes() {
-        
-        let contextname = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        do{
-            commuteArray = try contextname.fetch(Commute.fetchRequest()) as! [Commute]
-        } catch {
-            print("ERROR")
-        }
-        
-    }
     
     func sumCommutes() -> Double {
         var sum = 0.0

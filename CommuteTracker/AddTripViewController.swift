@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import SideMenu
 
 class AddTripViewController: UIViewController {
     
     var trip : Commute = Commute((context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext))
-
+    
     // Outlets
     
     @IBOutlet weak var addButton: UIButton!
@@ -26,13 +27,13 @@ class AddTripViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
     }
     
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,17 +45,20 @@ class AddTripViewController: UIViewController {
         } else {
             print("invaliddouble")
         }
-        trip.title = tripNameText.text!
+        if tripNameText != nil {
+            trip.title = tripNameText.text!
+        }
         
         let tripType = bikeWalkToggle.titleForSegment(at: bikeWalkToggle.selectedSegmentIndex)
         
         trip.transportType = tripType
         
-        (UIApplication.shared.delegate as! AppDelegate).saveContext()
-        
-        navigationController!.popViewController(animated: true)
+        if trip.title != nil {
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            navigationController!.popViewController(animated: true)
+        }
         
     }
-
-
+    
+    
 }
