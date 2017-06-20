@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SideMenu
 
 class AddTripViewController: UIViewController {
     
@@ -27,6 +26,7 @@ class AddTripViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        distanceText.keyboardType = .numberPad
         
         // Do any additional setup after loading the view.
         
