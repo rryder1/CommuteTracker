@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BB5B42FFC85B7FC441D24C20B4F04920"
+               BlueprintIdentifier = "6DBD8F0F82F2E3E90C6408DC3683A4F1"
                BuildableName = "Pods_CommuteTracker.framework"
                BlueprintName = "Pods-CommuteTracker"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BB5B42FFC85B7FC441D24C20B4F04920"
+            BlueprintIdentifier = "6DBD8F0F82F2E3E90C6408DC3683A4F1"
             BuildableName = "Pods_CommuteTracker.framework"
             BlueprintName = "Pods-CommuteTracker"
             ReferencedContainer = "container:Pods.xcodeproj">

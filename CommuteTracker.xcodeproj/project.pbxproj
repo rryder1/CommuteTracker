@@ -18,6 +18,8 @@
 		76367C231EF70B6D003F4EEF /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76367C221EF70B6D003F4EEF /* AddTripViewController.swift */; };
 		76367C271EF72C10003F4EEF /* CommutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76367C261EF72C10003F4EEF /* CommutesViewController.swift */; };
 		76B6BC391EF88D690088AC6C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B6BC381EF88D690088AC6C /* Helper.swift */; };
+		76D45F4E1EF9CB800006C695 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76D45F4D1EF9CB800006C695 /* GoogleService-Info.plist */; };
+		76D45F501EFB23D10006C695 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D45F4F1EFB23D10006C695 /* SignInViewController.swift */; };
 		FDC299D051ABE85F9B4BEE10 /* Pods_CommuteTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D350C4D5220DFAFDF42CBE /* Pods_CommuteTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		76367C221EF70B6D003F4EEF /* AddTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		76367C261EF72C10003F4EEF /* CommutesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommutesViewController.swift; sourceTree = "<group>"; };
 		76B6BC381EF88D690088AC6C /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		76D45F4D1EF9CB800006C695 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		76D45F4F1EFB23D10006C695 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 				76367C031EF6089D003F4EEF /* HomeViewController.swift */,
 				76367C221EF70B6D003F4EEF /* AddTripViewController.swift */,
 				76367C261EF72C10003F4EEF /* CommutesViewController.swift */,
+				76D45F4F1EFB23D10006C695 /* SignInViewController.swift */,
 				76367C1A1EF6180A003F4EEF /* BikeLogo.jpg */,
 				76367C051EF6089D003F4EEF /* Main.storyboard */,
 				76367C0B1EF6089D003F4EEF /* Assets.xcassets */,
@@ -94,6 +99,7 @@
 				76367C101EF6089D003F4EEF /* Info.plist */,
 				76367C1C1EF6DB4E003F4EEF /* icons8-List-50.png */,
 				76367C081EF6089D003F4EEF /* CommuteTracker.xcdatamodeld */,
+				76D45F4D1EF9CB800006C695 /* GoogleService-Info.plist */,
 			);
 			path = CommuteTracker;
 			sourceTree = "<group>";
@@ -141,6 +147,7 @@
 				TargetAttributes = {
 					76367BFD1EF6089D003F4EEF = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = A4P529G5CU;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -173,6 +180,7 @@
 				76367C0C1EF6089D003F4EEF /* Assets.xcassets in Resources */,
 				76367C071EF6089D003F4EEF /* Main.storyboard in Resources */,
 				76367C1B1EF6180A003F4EEF /* BikeLogo.jpg in Resources */,
+				76D45F4E1EF9CB800006C695 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76D45F501EFB23D10006C695 /* SignInViewController.swift in Sources */,
 				76367C231EF70B6D003F4EEF /* AddTripViewController.swift in Sources */,
 				76367C271EF72C10003F4EEF /* CommutesViewController.swift in Sources */,
 				76367C0A1EF6089D003F4EEF /* CommuteTracker.xcdatamodeld in Sources */,
@@ -360,6 +369,7 @@
 			baseConfigurationReference = 1C55D23C1E2FE0BD0B7DF31E /* Pods-CommuteTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A4P529G5CU;
 				INFOPLIST_FILE = CommuteTracker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -374,6 +384,7 @@
 			baseConfigurationReference = 5CE43CC4F8A66A9B96FC260E /* Pods-CommuteTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A4P529G5CU;
 				INFOPLIST_FILE = CommuteTracker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

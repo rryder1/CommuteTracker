@@ -11,5 +11,10 @@ platform :ios, ’10.0’
 use_frameworks!
 
 pod 'SideMenu'
+pod ‘Firebase/Core’
+pod ‘Firebase/Auth’
+pod ‘Firebase/Storage’
+pod ‘Firebase/Database’
+
 
 end

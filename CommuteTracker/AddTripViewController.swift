@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AddTripViewController: UIViewController {
     
@@ -22,6 +23,9 @@ class AddTripViewController: UIViewController {
     
     @IBOutlet weak var distanceText: UITextField!
     
+    let user: String = Auth.auth().currentUser!.uid
+
+    
     // Functions
     
     override func viewDidLoad() {
@@ -30,9 +34,8 @@ class AddTripViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
+        
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -40,18 +43,23 @@ class AddTripViewController: UIViewController {
     }
     @IBAction func addButtonPressed(_ sender: UIButton) {
         
+        let ref = Database.database().reference().child("Users").child(user).child("Trips").childByAutoId()
+        
         if Double(distanceText.text!) != nil {
             trip.distance = Double(distanceText.text!)!
+            ref.child("Distance").setValue(trip.distance)
         } else {
             print("invaliddouble")
         }
         if tripNameText != nil {
             trip.title = tripNameText.text!
+            ref.child("Trip Name").setValue(trip.title)
         }
         
         let tripType = bikeWalkToggle.titleForSegment(at: bikeWalkToggle.selectedSegmentIndex)
         
         trip.transportType = tripType
+        ref.child("Transport").setValue(trip.transportType)
         
         if trip.title != nil {
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
