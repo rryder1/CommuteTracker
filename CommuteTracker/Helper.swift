@@ -8,23 +8,46 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class Helper {
     
-    static func getCommutes() -> [Commute]{
+    
+    static func getCommutes() -> (Double) {
         
-        var commuteArray: [Commute]! = nil
+        let user: String = Auth.auth().currentUser!.uid
         
-        let contextname = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        var commuteArray: [Commutes] = []
         
-        do{
-            commuteArray = try contextname.fetch(Commute.fetchRequest()) as! [Commute]
-        } catch {
-            print("ERROR")
-        }
+        var sum = 0.0
+
         
-        return commuteArray
+        Database.database().reference().child("Users").child(user).child("Trips").observe(DataEventType.childAdded, with: { (snapshot) in
+            
+            let dict = snapshot.value as? NSDictionary
+            let commuteBuilder = Commutes()
+            
+            if dict?["Distance"] != nil {
+                commuteBuilder.distance = dict?["Distance"] as? Double
+            }
+            if dict?["TripName"] != nil {
+                commuteBuilder.title = dict?["TripName"] as? String
+            }
+            if dict?["Transport"] != nil {
+                commuteBuilder.transportType = dict?["Transport"] as? String
+            }
+            
+            sum += commuteBuilder.distance!
+            print(sum)
+            
+            commuteArray.append(commuteBuilder)
+            
+            
+            
+        })
+        print("complete")
         
+        return sum
     }
     
     

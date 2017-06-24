@@ -11,7 +11,7 @@ import Firebase
 
 class AddTripViewController: UIViewController {
     
-    var trip : Commute = Commute((context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext))
+    var trip : Commutes = Commutes()
     
     // Outlets
     
@@ -47,24 +47,20 @@ class AddTripViewController: UIViewController {
         
         if Double(distanceText.text!) != nil {
             trip.distance = Double(distanceText.text!)!
-            ref.child("Distance").setValue(trip.distance)
         } else {
             print("invaliddouble")
         }
         if tripNameText != nil {
             trip.title = tripNameText.text!
-            ref.child("Trip Name").setValue(trip.title)
         }
         
         let tripType = bikeWalkToggle.titleForSegment(at: bikeWalkToggle.selectedSegmentIndex)
         
-        trip.transportType = tripType
-        ref.child("Transport").setValue(trip.transportType)
+        trip.transportType = tripType!
+        ref.child("Distance").setValue(trip.distance);ref.child("TripName").setValue(trip.title);ref.child("Transport").setValue(trip.transportType)
+    
+        navigationController!.popViewController(animated: true)
         
-        if trip.title != nil {
-            (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            navigationController!.popViewController(animated: true)
-        }
         
     }
     

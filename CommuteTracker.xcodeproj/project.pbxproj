@@ -20,6 +20,7 @@
 		76B6BC391EF88D690088AC6C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B6BC381EF88D690088AC6C /* Helper.swift */; };
 		76D45F4E1EF9CB800006C695 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76D45F4D1EF9CB800006C695 /* GoogleService-Info.plist */; };
 		76D45F501EFB23D10006C695 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D45F4F1EFB23D10006C695 /* SignInViewController.swift */; };
+		76D45F541EFC71BB0006C695 /* Commutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D45F531EFC71BB0006C695 /* Commutes.swift */; };
 		FDC299D051ABE85F9B4BEE10 /* Pods_CommuteTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D350C4D5220DFAFDF42CBE /* Pods_CommuteTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		76B6BC381EF88D690088AC6C /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		76D45F4D1EF9CB800006C695 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		76D45F4F1EFB23D10006C695 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		76D45F531EFC71BB0006C695 /* Commutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commutes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +90,8 @@
 			children = (
 				76367C011EF6089D003F4EEF /* AppDelegate.swift */,
 				76B6BC381EF88D690088AC6C /* Helper.swift */,
-				76367C031EF6089D003F4EEF /* HomeViewController.swift */,
-				76367C221EF70B6D003F4EEF /* AddTripViewController.swift */,
-				76367C261EF72C10003F4EEF /* CommutesViewController.swift */,
-				76D45F4F1EFB23D10006C695 /* SignInViewController.swift */,
+				76D45F531EFC71BB0006C695 /* Commutes.swift */,
+				76D45F521EFC715B0006C695 /* ViewControllers */,
 				76367C1A1EF6180A003F4EEF /* BikeLogo.jpg */,
 				76367C051EF6089D003F4EEF /* Main.storyboard */,
 				76367C0B1EF6089D003F4EEF /* Assets.xcassets */,
@@ -102,6 +102,17 @@
 				76D45F4D1EF9CB800006C695 /* GoogleService-Info.plist */,
 			);
 			path = CommuteTracker;
+			sourceTree = "<group>";
+		};
+		76D45F521EFC715B0006C695 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				76367C221EF70B6D003F4EEF /* AddTripViewController.swift */,
+				76367C031EF6089D003F4EEF /* HomeViewController.swift */,
+				76367C261EF72C10003F4EEF /* CommutesViewController.swift */,
+				76D45F4F1EFB23D10006C695 /* SignInViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		DEF116ABEFD5F2BA524D48A2 /* Frameworks */ = {
@@ -245,6 +256,7 @@
 				76367C0A1EF6089D003F4EEF /* CommuteTracker.xcdatamodeld in Sources */,
 				76367C041EF6089D003F4EEF /* HomeViewController.swift in Sources */,
 				76367C021EF6089D003F4EEF /* AppDelegate.swift in Sources */,
+				76D45F541EFC71BB0006C695 /* Commutes.swift in Sources */,
 				76B6BC391EF88D690088AC6C /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

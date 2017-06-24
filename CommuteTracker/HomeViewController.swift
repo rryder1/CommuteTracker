@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var consecutiveCommutes: UILabel!
     @IBOutlet weak var totalMiles: UILabel!
     
-    var commuteArray : [Commute] = []
+    var commuteArray : [Commutes] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +22,11 @@ class HomeViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        commuteArray = Helper.getCommutes()
-        totalMiles.text = String(sumCommutes())
+        
+        let total = Helper.getCommutes()
+        totalMiles.text = String(total)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,11 +37,16 @@ class HomeViewController: UIViewController {
     
     func sumCommutes() -> Double {
         var sum = 0.0
+        
+        if commuteArray.count != 0{
         for i in 0 ..< commuteArray.count{
-            sum = sum + commuteArray[i].distance
+            sum = sum + commuteArray[i].distance!
         }
         
         return sum
+        } else {
+            return 0
+        }
     }
 
 
