@@ -13,6 +13,7 @@ class CommutesViewController: UIViewController, UITableViewDelegate, UITableView
     
     let user: String = Auth.auth().currentUser!.uid
     
+   
     var commuteArray: [Commutes] = []
     
     var deleteID = ""

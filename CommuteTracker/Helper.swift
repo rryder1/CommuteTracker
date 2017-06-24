@@ -13,7 +13,7 @@ import Firebase
 class Helper {
     
     
-    static func getCommutes() -> (Double) {
+    static func updateStats(prevDataField: UILabel, prevCommuteField: UILabel){
         
         let user: String = Auth.auth().currentUser!.uid
         
@@ -37,19 +37,23 @@ class Helper {
                 commuteBuilder.transportType = dict?["Transport"] as? String
             }
             
-            sum += commuteBuilder.distance!
+            sum = sum + commuteBuilder.distance!
             print(sum)
             
             commuteArray.append(commuteBuilder)
-            
+            prevDataField.text? = String(sum)
+            prevCommuteField.text? = String(commuteArray.count)
             
             
         })
+        
         print("complete")
         
-        return sum
     }
     
+    static func updateTableView(tableView:UITableView){
+        tableView.reloadData();
+    }
     
     
 }

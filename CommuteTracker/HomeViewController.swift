@@ -23,8 +23,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        let total = Helper.getCommutes()
-        totalMiles.text = String(total)
+    Helper.updateStats(prevDataField: totalMiles, prevCommuteField: consecutiveCommutes)
         
         
     }
