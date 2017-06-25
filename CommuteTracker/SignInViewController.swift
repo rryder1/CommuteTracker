@@ -8,23 +8,29 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, GIDSignInUIDelegate {
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        GIDSignIn.sharedInstance().uiDelegate = self
+        //GIDSignIn.sharedInstance().signIn()
         // Do any additional setup after loading the view.
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if Auth.auth().currentUser != nil {
+            performSegue(withIdentifier: "signInSegue", sender: nil)
+        }
         
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
+    
     
     @IBAction func signInPressed(_ sender: Any) {
         
@@ -46,6 +52,7 @@ class SignInViewController: UIViewController {
             self.performSegue(withIdentifier: "signInSegue", sender: nil)
             
         }
+        
         
         
     }

@@ -17,10 +17,15 @@
 		76367C1D1EF6DB4E003F4EEF /* icons8-List-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 76367C1C1EF6DB4E003F4EEF /* icons8-List-50.png */; };
 		76367C231EF70B6D003F4EEF /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76367C221EF70B6D003F4EEF /* AddTripViewController.swift */; };
 		76367C271EF72C10003F4EEF /* CommutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76367C261EF72C10003F4EEF /* CommutesViewController.swift */; };
+		7694DA871F00694A0014CE8D /* CommonCommutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7694DA861F00694A0014CE8D /* CommonCommutesViewController.swift */; };
 		76B6BC391EF88D690088AC6C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B6BC381EF88D690088AC6C /* Helper.swift */; };
 		76D45F4E1EF9CB800006C695 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76D45F4D1EF9CB800006C695 /* GoogleService-Info.plist */; };
 		76D45F501EFB23D10006C695 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D45F4F1EFB23D10006C695 /* SignInViewController.swift */; };
 		76D45F541EFC71BB0006C695 /* Commutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D45F531EFC71BB0006C695 /* Commutes.swift */; };
+		76D45F561EFF0AAF0006C695 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D45F551EFF0AAF0006C695 /* TabBarController.swift */; };
+		76D45F5A1EFF22680006C695 /* icons8-Add-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 76D45F591EFF22680006C695 /* icons8-Add-50.png */; };
+		76D45F5C1EFF537C0006C695 /* btn_google_signin_light_normal_web.png in Resources */ = {isa = PBXBuildFile; fileRef = 76D45F5B1EFF537C0006C695 /* btn_google_signin_light_normal_web.png */; };
+		76D45F5E1F004F010006C695 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D45F5D1F004F010006C695 /* SettingsTableViewController.swift */; };
 		FDC299D051ABE85F9B4BEE10 /* Pods_CommuteTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D350C4D5220DFAFDF42CBE /* Pods_CommuteTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,10 +45,15 @@
 		76367C1C1EF6DB4E003F4EEF /* icons8-List-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-List-50.png"; sourceTree = "<group>"; };
 		76367C221EF70B6D003F4EEF /* AddTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		76367C261EF72C10003F4EEF /* CommutesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommutesViewController.swift; sourceTree = "<group>"; };
+		7694DA861F00694A0014CE8D /* CommonCommutesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonCommutesViewController.swift; sourceTree = "<group>"; };
 		76B6BC381EF88D690088AC6C /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		76D45F4D1EF9CB800006C695 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		76D45F4F1EFB23D10006C695 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		76D45F531EFC71BB0006C695 /* Commutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commutes.swift; sourceTree = "<group>"; };
+		76D45F551EFF0AAF0006C695 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		76D45F591EFF22680006C695 /* icons8-Add-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-Add-50.png"; sourceTree = "<group>"; };
+		76D45F5B1EFF537C0006C695 /* btn_google_signin_light_normal_web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_google_signin_light_normal_web.png; sourceTree = "<group>"; };
+		76D45F5D1F004F010006C695 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +103,8 @@
 				76D45F531EFC71BB0006C695 /* Commutes.swift */,
 				76D45F521EFC715B0006C695 /* ViewControllers */,
 				76367C1A1EF6180A003F4EEF /* BikeLogo.jpg */,
+				76D45F591EFF22680006C695 /* icons8-Add-50.png */,
+				76D45F5B1EFF537C0006C695 /* btn_google_signin_light_normal_web.png */,
 				76367C051EF6089D003F4EEF /* Main.storyboard */,
 				76367C0B1EF6089D003F4EEF /* Assets.xcassets */,
 				76367C0D1EF6089D003F4EEF /* LaunchScreen.storyboard */,
@@ -108,7 +120,10 @@
 			isa = PBXGroup;
 			children = (
 				76367C221EF70B6D003F4EEF /* AddTripViewController.swift */,
+				7694DA861F00694A0014CE8D /* CommonCommutesViewController.swift */,
+				76D45F5D1F004F010006C695 /* SettingsTableViewController.swift */,
 				76367C031EF6089D003F4EEF /* HomeViewController.swift */,
+				76D45F551EFF0AAF0006C695 /* TabBarController.swift */,
 				76367C261EF72C10003F4EEF /* CommutesViewController.swift */,
 				76D45F4F1EFB23D10006C695 /* SignInViewController.swift */,
 			);
@@ -186,9 +201,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76D45F5A1EFF22680006C695 /* icons8-Add-50.png in Resources */,
 				76367C1D1EF6DB4E003F4EEF /* icons8-List-50.png in Resources */,
 				76367C0F1EF6089D003F4EEF /* LaunchScreen.storyboard in Resources */,
 				76367C0C1EF6089D003F4EEF /* Assets.xcassets in Resources */,
+				76D45F5C1EFF537C0006C695 /* btn_google_signin_light_normal_web.png in Resources */,
 				76367C071EF6089D003F4EEF /* Main.storyboard in Resources */,
 				76367C1B1EF6180A003F4EEF /* BikeLogo.jpg in Resources */,
 				76D45F4E1EF9CB800006C695 /* GoogleService-Info.plist in Resources */,
@@ -253,10 +270,13 @@
 				76D45F501EFB23D10006C695 /* SignInViewController.swift in Sources */,
 				76367C231EF70B6D003F4EEF /* AddTripViewController.swift in Sources */,
 				76367C271EF72C10003F4EEF /* CommutesViewController.swift in Sources */,
+				76D45F561EFF0AAF0006C695 /* TabBarController.swift in Sources */,
 				76367C0A1EF6089D003F4EEF /* CommuteTracker.xcdatamodeld in Sources */,
 				76367C041EF6089D003F4EEF /* HomeViewController.swift in Sources */,
+				76D45F5E1F004F010006C695 /* SettingsTableViewController.swift in Sources */,
 				76367C021EF6089D003F4EEF /* AppDelegate.swift in Sources */,
 				76D45F541EFC71BB0006C695 /* Commutes.swift in Sources */,
+				7694DA871F00694A0014CE8D /* CommonCommutesViewController.swift in Sources */,
 				76B6BC391EF88D690088AC6C /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

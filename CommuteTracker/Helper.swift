@@ -51,9 +51,5 @@ class Helper {
         
     }
     
-    static func updateTableView(tableView:UITableView){
-        tableView.reloadData();
-    }
-    
     
 }

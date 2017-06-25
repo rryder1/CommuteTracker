@@ -24,7 +24,11 @@ class AddTripViewController: UIViewController {
     @IBOutlet weak var distanceText: UITextField!
     
     let user: String = Auth.auth().currentUser!.uid
-
+    
+    var source = ""
+    
+    var row = 0
+    
     
     // Functions
     
@@ -33,7 +37,8 @@ class AddTripViewController: UIViewController {
         distanceText.keyboardType = .numberPad
         
         // Do any additional setup after loading the view.
-        
+        print(source)
+        print(row)
         
     }
     
@@ -41,9 +46,21 @@ class AddTripViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     @IBAction func addButtonPressed(_ sender: UIButton) {
         
-        let ref = Database.database().reference().child("Users").child(user).child("Trips").childByAutoId()
+        var ref = Database.database().reference()
+        
+        if (source == "Settings"){
+            
+            ref = Database.database().reference().child("Users").child(user).child("CommonCommutes").child(String(row))
+            
+        }else {
+            
+            ref = Database.database().reference().child("Users").child(user).child("Trips").childByAutoId()
+            
+        }
+        
         
         if Double(distanceText.text!) != nil {
             trip.distance = Double(distanceText.text!)!
@@ -57,12 +74,21 @@ class AddTripViewController: UIViewController {
         let tripType = bikeWalkToggle.titleForSegment(at: bikeWalkToggle.selectedSegmentIndex)
         
         trip.transportType = tripType!
-        ref.child("Distance").setValue(trip.distance);ref.child("TripName").setValue(trip.title);ref.child("Transport").setValue(trip.transportType)
-    
+        
+        ref.setValue([
+            "Distance": trip.distance!,
+            "TripName": trip.title!,
+            "Transport": trip.transportType!
+            ])
+        
         navigationController!.popViewController(animated: true)
         
         
+        
+        
     }
+    
+    
     
     
 }

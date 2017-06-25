@@ -18,6 +18,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Helper.updateStats(prevDataField: totalMiles, prevCommuteField: consecutiveCommutes)
         // Do any additional setup after loading the view, typically from a nib.
     }
     

@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class CommutesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CommutesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     let user: String = Auth.auth().currentUser!.uid
     
@@ -17,7 +17,6 @@ class CommutesViewController: UIViewController, UITableViewDelegate, UITableView
     var commuteArray: [Commutes] = []
     
     var deleteID = ""
-    
     
     
     @IBOutlet weak var commuteTableView: UITableView!
@@ -72,15 +71,33 @@ class CommutesViewController: UIViewController, UITableViewDelegate, UITableView
             self.commuteTableView.reloadData()
             
         })
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
         
+        if #available(iOS 10.0, *) {
+            commuteTableView.refreshControl = refreshControl
+        } else {
+            commuteTableView.backgroundView = refreshControl
+        }
     }
+    
+    func refresh(_ refreshControl: UIRefreshControl) {
+        // Do your job, when done:
+        commuteTableView.reloadData()
+        print("ViewReloaded")
+        refreshControl.endRefreshing()
+    }
+    
+
     
     override func viewDidAppear(_ animated: Bool) {
         
         self.commuteTableView.reloadData()
-        
+        print("ViewAppeared")
         
     }
+    
+ 
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .default, title: "Delete") { action, index in
